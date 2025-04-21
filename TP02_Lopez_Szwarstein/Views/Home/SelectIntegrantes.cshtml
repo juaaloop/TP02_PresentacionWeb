@@ -1,0 +1,21 @@
+   @{
+    ViewData["Title"] = "InfoIntegrantes";
+    }
+    <link rel="stylesheet" href="/css/style.css">
+    <main>
+   <article>
+   
+    <h1>Datos Personales de @ViewBag.DNI</h1>
+    <p>Nombre: @ViewBag.IntegranteDP.Nombre <br>
+    Apellido: @ViewBag.IntegranteDP.Apellido <br>
+    Fecha de nacimiento: @ViewBag.IntegranteDP.FechaNacimiento.ToShortDateString() <br>
+    Foto:
+    </p>
+    <img src= "/imagenes/@ViewBag.IntegranteDP.Foto" alt="Foto de perfil de @ViewBag.DNI"/>
+   <div>
+    <a href='@Url.Action("Index")'><h3>Volver al menu</h3></a>
+    <a href='@Url.Action("InfoDatosFamiliares",new{dni=@ViewBag.DNI})'><h3>Ver información familiar</h3></a>
+    <a href='@Url.Action("InfoDatosInteres",new{dni=@ViewBag.DNI})'><h3>Ver intereses</h3></a>
+   </div>
+   </main>
+

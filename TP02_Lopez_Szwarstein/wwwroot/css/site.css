@@ -1,0 +1,21 @@
+html {
+  font-size: 14px;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0.1%;
+  border:none;
+  
+}
+footer {
+  clear:both;
+  border:none;
+  background-color: #4C956C;
+}

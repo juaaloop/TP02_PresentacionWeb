@@ -1,0 +1,20 @@
+   @{
+    ViewData["Title"] = "InfoIntegrantes";
+    }
+    <link rel="stylesheet" href="/css/style.css">
+
+   <main>
+   <article>
+
+    <h1>Intereses:</h1>
+    <p>Hobbies: @ViewBag.DatosIntereses.Hobbies</p>
+    <p>Series favoritas: @ViewBag.DatosIntereses.SeriesFavoritas</p>
+    <p>Amigos: @ViewBag.DatosIntereses.Amigos</p>
+    <p>Materias favoritas: @ViewBag.DatosIntereses.GustosEscolares</p>
+   
+   <div>   
+    <a href='@Url.Action("Index")'><h3>Volver al menu </h3></a>
+   </div>
+    </article>
+
+   </main>

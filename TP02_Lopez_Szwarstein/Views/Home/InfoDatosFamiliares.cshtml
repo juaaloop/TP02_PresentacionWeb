@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "infoDatosFamiliares";
+}
+<link rel="stylesheet" href="/css/style.css">
+
+<main>
+<article>
+
+<h1>Datos Familiares</h1>
+@foreach(DatoFamiliar dato in ViewBag.DatosFamiliares){
+   <p>Nombre: @dato.Nombre </p>
+    <p> Apellido: @dato.Apellido </p>
+    <p> Parentesco: @dato.Parentesco </p>
+    <p> Descripción: @dato.Descripcion</p><br>
+
+}
+<div>
+ <a href='@Url.Action("Index")'><h3>Volver al menu</h3></a>
+</div>
+</article>
+</main>

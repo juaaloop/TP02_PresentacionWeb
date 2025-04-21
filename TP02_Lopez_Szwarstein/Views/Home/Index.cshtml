@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="/css/style.css">
+
+<main>
+
+
+        @foreach (Integrante integrante in ViewBag.grupo.Values){
+         
+          <section>
+          <img src= "/imagenes/@integrante.DatosPersonales.Foto" alt="Foto de perfil de @integrante.Dni"/>
+          <div>
+          <a href= '@Url.Action("SelectIntegrantes", new{dni=integrante.Dni})' alt="Ir al estudiante seleccionado"> <h3>Datos personales de @integrante.DatosPersonales.Nombre @integrante.DatosPersonales.Apellido</h3></a> 
+          <a href='@Url.Action("InfoDatosFamiliares",new{dni=integrante.Dni})'><h3>Ver información familiar</h3></a>
+          <a href='@Url.Action("InfoDatosInteres",new{dni=integrante.Dni})'><h3>Ver intereses</h3></a>
+          </div>
+            </section>
+
+       }
+
+</main>
